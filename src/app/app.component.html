@@ -1,11 +1,15 @@
 <h1>{{title}}</h1>
 <ul>
-  <li *ngFor = "let hero of heroes">
-    {{hero.name}}
+  <li *ngFor = "let hero of heroes" (click)="onSelect(hero)">
+    {{hero.id}}. {{hero.name}}
   </li>
 </ul>
 
-<div>
-  <label>name: </label>
-  <input [(ngModel)]="heroes[0].name" placeholder="name"> // edits the first hero's name
+<div *ngIf="selectedHero">
+  <h2>{{selectedHero.name}} details!</h2>
+  <div><label>Id: </label>{{selectedHero.id}}</div>
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+  </div>
 </div>
