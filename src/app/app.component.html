@@ -5,6 +5,9 @@
   </li>
 </ul>
 
+<hero-detail [hero]="selectedHero"></hero-detail>
+<!--
+If not using hero-detail component
 <div *ngIf="selectedHero">
   <h2>{{selectedHero.name}} details!</h2>
   <div><label>Id: </label>{{selectedHero.id}}</div>
@@ -13,3 +16,4 @@
     <input [(ngModel)]="selectedHero.name" placeholder="name"/>
   </div>
 </div>
+-->
