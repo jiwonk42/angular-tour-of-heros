@@ -1,6 +1,11 @@
-<h1>{{title}}</h1><h2>{{heroes[0].name}} details!</h2>
+<h1>{{title}}</h1>
 <ul>
   <li *ngFor = "let hero of heroes">
     {{hero.name}}
   </li>
 </ul>
+
+<div>
+  <label>name: </label>
+  <input [(ngModel)]="heroes[0].name" placeholder="name"> // edits the first hero's name
+</div>
