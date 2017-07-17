@@ -1,0 +1,17 @@
+<ul>
+  <li *ngFor = "let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+    {{hero.id}}. {{hero.name}}
+  </li>
+</ul>
+
+<!--
+If not using hero-detail component
+<div *ngIf="selectedHero">
+  <h2>{{selectedHero.name}} details!</h2>
+  <div><label>Id: </label>{{selectedHero.id}}</div>
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+  </div>
+</div>
+-->
